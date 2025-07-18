@@ -8,6 +8,7 @@ window.title("COMLOCK UI")
 window.resizable(0,0)
 #End of window settings
 
+#Video implementation https://github.com/TomSchimansky/CustomTkinter/discussions/531
 
 #Background
 background_image_path = "images/comlock.png"
@@ -16,14 +17,17 @@ ctk_background_image = ctk.CTkImage(light_image=background_image, dark_image=bac
 #End of background
 
 
-#Buttons
-#def go_home():
+#Buttons functions
+def go_home():
+    go_home_btn.place(relx=0.7, rely=0.88, anchor="center")
+    call_btn.place(relx=0.3, rely=0.88, anchor="center")
+
     
 
 def start_call():
     call_btn.place_forget()
     go_home_btn.place(relx=0.5, rely=0.88, anchor="center")
-#End of buttons
+#End of buttons functions
 
 
 #Display background
@@ -33,7 +37,8 @@ image_label.place(relx=0, rely=0)
 
 #Home button
 go_home_btn = ctk.CTkButton(window, text="HOME", border_width=3, border_color="black", 
-                            corner_radius=20, bg_color="transparent",  width=20,height=20)
+                            corner_radius=20, bg_color="transparent",  width=20, height=20,
+                            command=go_home)
 go_home_btn.place(relx=0.7, rely=0.88, anchor="center")
 #End of home button
 
