@@ -3,9 +3,10 @@ from PIL import Image
 
 #Window settings
 window = ctk.CTk()
-window.geometry("144x144")
+window.geometry("160x128")
 window.title("COMLOCK UI")
 window.resizable(0,0)
+window.attributes("-fullscreen", "True")
 #End of window settings
 
 #Video implementation https://github.com/TomSchimansky/CustomTkinter/discussions/531
@@ -13,7 +14,9 @@ window.resizable(0,0)
 #Background
 background_image_path = "images/comlock.png"
 background_image = Image.open(background_image_path)
-ctk_background_image = ctk.CTkImage(light_image=background_image, dark_image=background_image, size=(144, 144))
+ctk_background_image = ctk.CTkImage(light_image=background_image, 
+                                    dark_image=background_image, 
+                                    size=(160, 128))
 #End of background
 
 
