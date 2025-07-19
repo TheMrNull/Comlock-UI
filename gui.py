@@ -50,6 +50,9 @@ call_btn.place(relx=0.3, rely=0.88, anchor="center")
 #Call of home button
 
 
-
+#Hot keys
+window.bind("<h>", lambda event: go_home())
+window.bind("<c>", lambda event: start_call())
+#End of hot keys
 
 window.mainloop()
