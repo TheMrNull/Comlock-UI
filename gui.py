@@ -6,7 +6,11 @@ window = ctk.CTk()
 window.geometry("160x128")
 window.title("COMLOCK UI")
 window.resizable(0,0)
-window.attributes("-fullscreen", "True")
+window.attributes("-fullscreen", True)
+window.lift()
+window.attributes('-topmost', True)
+window.after(100, lambda: window.attributes('-topmost', False))
+window.focus_force()
 #End of window settings
 
 #Video implementation https://github.com/TomSchimansky/CustomTkinter/discussions/531
