@@ -62,6 +62,10 @@ WantedBy=graphical.target
 
 To save and exit the changes press ^x, than conferm with y and hit enter (note you can also use vim or any other text editor if you prefer it).  
 
+Then run this `sudo systemctl daemon-reload  &&
+sudo systemctl enable comlock.service &&
+sudo systemctl start comlock.service`
+
 At this point your Pi should be good to go, run `sudo reboot now` and after turning back on everything should work as expected.
 
 For now  the UI is very simple, you can connect a mouse to test it or a keyboard. It will be updated and completed when I'll have time.  

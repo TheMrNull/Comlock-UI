@@ -20,7 +20,7 @@ echo "hdmi_mode=87" | sudo tee -a /boot/config.txt > /dev/null
 echo "hdmi_cvt=160 128 60 1 0 0 0" | sudo tee -a /boot/config.txt > /dev/null
 sudo sed -i 's/^dtoverlay=vc4-kms-v3d/#&/' /boot/config.txt
 echo "dtoverlay=vc4-fkms-v3d" | sudo tee -a /boot/config.txt > /dev/null
-sudo sed -i '/^exit 0/i sudo /usr/Comlock-UI/screen/fbcp-ili9341/build/fbcp-ili9341 &' /etc/rc.local
+sudo sed -i '/^exit 0/i sudo /usr/screen/fbcp-ili9341/build/fbcp-ili9341 &' /etc/rc.local
 #Installing GUI
 
 cd ~
